@@ -578,13 +578,47 @@ def debt():
  <g transform="translate(14,30)"><rect width="42" height="28" fill="#f4c400"/><rect y="9" width="42" height="10" fill="#0033a0"/>
   <rect y="19" width="42" height="9" fill="#cf142b"/></g>
  <text x="70" y="30" font-size="13" fill="#141414" font-family="Georgia" font-weight="bold">$237.5bn</text>
- <text x="150" y="30" font-size="7" fill="#555" font-family="Arial">= 242% OF GDP</text>
  {''.join(bars)}
 </svg>"""
 
 
+def pharma():
+    """A capsule and a deal tag: Sanofi agrees to buy Insmed."""
+    return """
+<svg viewBox="0 0 240 84" preserveAspectRatio="xMidYMid slice">
+ <rect width="240" height="84" fill="#ece6f4"/>
+ <g transform="translate(70,44) rotate(-30)">
+  <rect x="-40" y="-14" width="80" height="28" rx="14" fill="#7b4a9e"/>
+  <path d="M0 -14 H26 A14 14 0 0 1 26 14 H0Z" fill="#f4f1f8"/>
+  <rect x="-40" y="-14" width="80" height="28" rx="14" fill="none" stroke="#4b2a66" stroke-width="1.5"/>
+ </g>
+ <path d="M126 40 h22 M140 32 l10 8 -10 8" stroke="#4b2a66" stroke-width="3" fill="none"/>
+ <rect x="158" y="26" width="70" height="28" rx="4" fill="#fff" stroke="#7b4a9e"/>
+ <text x="193" y="38" font-size="7" fill="#4b2a66" text-anchor="middle" font-family="Arial" font-weight="bold">SANOFI → INSMED</text>
+ <text x="193" y="49" font-size="7" fill="#555" text-anchor="middle" font-family="Arial">$175 A SHARE</text>
+</svg>"""
+
+
+def ariane():
+    """A heavy launcher on the pad at Kourou with a satellite stack above."""
+    return """
+<svg viewBox="0 0 240 84" preserveAspectRatio="xMidYMid slice">
+ <rect width="240" height="84" fill="#16233f"/>
+ <g fill="#fff" opacity="0.7"><circle cx="20" cy="18" r="0.8"/><circle cx="60" cy="12" r="0.7"/><circle cx="200" cy="20" r="0.9"/><circle cx="170" cy="10" r="0.7"/><circle cx="222" cy="40" r="0.6"/></g>
+ <path d="M0 70 H240 V84 H0Z" fill="#2c5a3a"/>
+ <g transform="translate(120,0)">
+  <path d="M-6 16 L0 6 L6 16Z" fill="#e8e8e8"/>
+  <rect x="-6" y="16" width="12" height="46" fill="#f4f4f4" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="-15" y="34" width="6" height="30" rx="2" fill="#dcdcdc"/><rect x="9" y="34" width="6" height="30" rx="2" fill="#dcdcdc"/>
+  <rect x="-21" y="38" width="5" height="26" rx="2" fill="#cfcfcf"/><rect x="16" y="38" width="5" height="26" rx="2" fill="#cfcfcf"/>
+  <path d="M-5 62 L0 76 L5 62Z M-14 64 L-12 74 L-10 64Z M10 64 L12 74 L14 64Z" fill="#ffcf5a"/>
+ </g>
+ <text x="10" y="22" font-size="7" fill="#c9d6f2" font-family="Arial" font-weight="bold">KOUROU · ARIANE 6</text>
+</svg>"""
+
+
 ART = dict(launch=launch, markets=markets, hormuz=hormuz, court=court, drones=drones,
-           court_lead=court_lead, pif_tower=pif_tower, markets_up=markets_up, probe=probe,
+           court_lead=court_lead, pharma=pharma, ariane=ariane, pif_tower=pif_tower, markets_up=markets_up, probe=probe,
            trophy=trophy, scoreline=scoreline, debt=debt,
            mine=mine, garment=garment, treaty=signing, refinery=refinery, sudan=sudan, cuba=cuba,
            femicide=femicide, ebola=ebola)

@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261124/yossapr/world-in-one-day-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 [![reward](https://make.fun/badge/news-image-20261124/yossapr/world-in-one-day-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
-One front page that sums up the world's news of Tuesday 24 November 2026: three drawn lead scenes (Huawei convicted on 10 of 12 counts in Brooklyn, a Houthi drone hitting Riyadh's PIF tower, Asia's chip stocks soaring on Huang's return to Nvidia), eight illustrated stories from every region, a UTC timeline, a numbered world map, 22 briefs and a date check. Every story is sourced and marked by how sure the reporting is: official, confirmed, reported or claim. Entered in the make.fun bounty [Sum up 24 November's world news in one image](https://make.fun/bounty/news-image-20261124).
+One front page that sums up the world's news of Tuesday 24 November 2026: three drawn lead scenes (Huawei convicted on 10 of 12 counts in Brooklyn, a Houthi drone hitting Riyadh's PIF tower, Asia's chip stocks soaring on Huang's return to Nvidia), ten illustrated stories with their key figure on the picture from every region, a UTC timeline, a numbered world map, 20 briefs and a date check. Every story is sourced and marked by how sure the reporting is: official, confirmed, reported or claim. Entered in the make.fun bounty [Sum up 24 November's world news in one image](https://make.fun/bounty/news-image-20261124).
 
 ![The front page](entry.png)
 

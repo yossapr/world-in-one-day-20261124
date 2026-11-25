@@ -90,6 +90,12 @@ def sure_html(label):
     return f'<span class="sure" style="color:{col};border-color:{col}">{esc(label)}</span>'
 
 
+def chip_html(s):
+    if not s.get("chip"):
+        return ""
+    return f'<span class="chip">{esc(s["chip"])}</span>'
+
+
 def timeline_html():
     items = "".join(f'<span class="ev"><b>{esc(t)}</b> {esc(x)}</span>' for t, x in ed.TIMELINE)
     return f'<div class="timeline"><span class="tl">THE DAY IN UTC</span>{items}</div>'
@@ -99,7 +105,7 @@ def lead_html(i, s):
     c = region_color(s["region"])
     return f"""
 <article class="lead">
-  <div class="scene">{art.ART[s['art']]()}<span class="num" style="background:{c}">{i}</span></div>
+  <div class="scene">{art.ART[s['art']]()}<span class="num" style="background:{c}">{i}</span>{chip_html(s)}</div>
   <div class="meta"><span class="tag" style="background:{c}">{esc(s['tag'])}</span>
     <span class="where">{esc(s['place'])} \u00b7 {esc(s['beat'])}</span>{sure_html(s['sure'])}</div>
   <h2>{esc(s['head'])}</h2>
@@ -112,7 +118,7 @@ def card_html(i, s):
     c = region_color(s["region"])
     return f"""
 <article class="card">
-  <div class="scene">{art.ART[s['art']]()}<span class="num" style="background:{c}">{i}</span></div>
+  <div class="scene">{art.ART[s['art']]()}<span class="num" style="background:{c}">{i}</span>{chip_html(s)}</div>
   <div class="where"><i style="background:{c}"></i>{esc(s['place'])}{sure_html(s['sure'])}</div>
   <h3>{esc(s['head'])}</h3>
   <p>{esc(s['dek'])}</p>
@@ -196,12 +202,15 @@ html,body {{ width:{SIZE}px; height:{SIZE}px; overflow:hidden; background:#f8f4e
   padding:2px 6px; margin-right:6px; }}
 .timeline .ev {{ flex:1; white-space:nowrap; border-left:2px solid #b3261e; padding-left:5px; }}
 .timeline .ev b {{ color:#b3261e; }}
-.cards {{ display:grid; grid-template-columns:repeat(4,1fr); gap:7px 14px; margin:5px 14px 0; }}
+.cards {{ display:grid; grid-template-columns:repeat(5,1fr); gap:7px 11px; margin:5px 14px 0; }}
 .card .scene {{ height:66px; }}
 .card .where {{ margin-top:4px; display:flex; align-items:center; gap:4px; font-size:8px; overflow:visible; }}
 .card .where i {{ width:7px; height:7px; display:inline-block; }}
-.card h3 {{ font-size:16px; line-height:18px; margin-top:2px; letter-spacing:-.2px; }}
-.card p {{ font:10.5px/13px Arial, sans-serif; color:#333; margin-top:2px; }}
+.card h3 {{ font-size:14.5px; line-height:16.5px; margin-top:2px; letter-spacing:-.2px; }}
+.card p {{ font:10px/12.5px Arial, sans-serif; color:#333; margin-top:2px; }}
+.chip {{ position:absolute; right:5px; bottom:5px; background:#b3261e; color:#fff; font:bold 10px Arial, sans-serif;
+  letter-spacing:.6px; padding:2px 5px; border:1.5px solid #fff; box-shadow:0 1px 2px rgba(0,0,0,.35); }}
+.lead .chip {{ font-size:15px; padding:3px 8px; right:7px; bottom:7px; }}
 .bottom {{ display:flex; gap:14px; margin:7px 14px 0; border-top:2px solid #141414; padding-top:5px; }}
 .mapbox {{ width:330px; flex:none; }}
 .mapbox h4, .briefs h4 {{ font:bold 9.5px Arial, sans-serif; letter-spacing:1.5px; margin-bottom:4px; }}
